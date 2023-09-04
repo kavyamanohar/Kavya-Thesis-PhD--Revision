@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%% CHAPTER - 8 %%%%%%%%%%%%%%%%%%%%\\
+\chapter{Conclusion}
+\label{ch:conclusion} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \graphicspath{{Figures/chapter8-Conclusion}}
+% 
+
+In this thesis we have demonstrated that the morphological complexity of
+Malayalam is much higher than that of many other Indian and European languages
+which are known for their complex morphological structure. Considering this
+morphological complexity, a general purpose \gls{asr} would require a large
+\gls{pl}. We designed and developed an \gls{fst} based bidirectional
+grapheme to phoneme conversion tool Mlphon, which can additionally perform
+syllabification as well. The speed and accuracy of Mlphon is evaluated and
+compared with other openly available lexicon creation tools.
+
+Then we have presented the building process of \gls{lvcsr} system for
+Malayalam. The resultant model is evaluated in terms of \gls{wer}. The data
+used for building the model, model creation scripts, lexicons and the resultant
+model are made publicly available under open license for reproduction and reuse
+purposes.
+
+We have also presented an alternate approach to address the morphological
+complexity of Malayalam in ASR task by building open vocabulary \gls{asr}.
+Existing subword segmentation strategies are compared with two proposed
+algorithms for subword modelling in Malayalam and the resulting \gls{wer} are
+evaluated.
+
+\section{Major Contributions}
+
+\begin{enumerate}
+    \item Analysis of the morphological complexity of Malayalam language.
+    \item Documentation of the graphemic and phonemic inventory of Malayalam and the
+          correspondence between the two.
+    \item  Development of an algorithmic description of the grapheme-phoneme
+          correspondence in Malayalam and implement it into a modular toolkit.
+    \item  Publication of large vocabulary pronunciation lexicon of more than hundred thousand words belonging to different word categories.
+    \item Development of a \gls{lvcsr} model for Malayalam and publication of an open
+          licensed Malayalam \gls{asr} model that could be integrated to various
+          applications.
+    \item Exploration of subword segmentation strategies suited for Malayalam considering
+          its morphological complexity.
+    \item  Development of subword based open vocabulary \gls{asr} model to reduce
+          \gls{wer} and model memory requirement.
+\end{enumerate}
+
+Furthermore, open dissemination of the source codes and the models is essential
+to ensure reproducibility, reusability and research continuity. This aspect of
+has been given utmost priority at every stage of this research work.
+
+\section{Limitations}
+
+Many large speech corpora in Malayalam published at the time of the writing of this thesis are documented in the literature review. However they were  not utilised in the experiments of the research work, which were completed before the publication of those resources. 
+
+The experiments in the current research uses the best approach in hybrid DNN-HMM acoustic modelling, using \gls{tdnn} with long temporal context and \gls{mmi} based sequence discriminative training \cite{peddinti2015time,vesely2013sequence,povey2016purely,povey18_interspeech}. Over the past few years, the field of ASR has undergone significant changes, particularly with the introduction of pretrained speech transformers trained on speech-only data \cite{baevski2021unsupervised} or combined with annotated speech data \cite{radford2022robust} from multiple languages, which can be fine-tuned for ASR tasks using small annotated speech datasets. While the use of such models has not been extensively explored in the low-resource ASR task of this thesis, they might have the potential to significantly improve the performance of ASR systems.
+
+\section{Future Scope}
+
+The Mlphon \gls{g2p} tool developed in this study doesn't currently offer transcriptions at the allophone level that indicate co-articulation effects. However, there's potential to expand the tool to include these effects in the future.
+
+As a future avenue of research, it would be valuable to explore methodologies that effectively isolate the impact of varying phonetic lexicons in acoustic models from the presence of language models. This could facilitate a more refined assessment of phoneme recognition efficiency within diverse acoustic models when using distinct pronunciation lexicons. Furthermore, investigating techniques to disentangle these influences could yield insights into the interplay of pronunciation and language modeling in speech recognition systems.
+
+To enhance the open framework for building ASR introduced in this thesis, it would be beneficial to increase the speech dataset used for acoustic modeling. With the availability of new speech datasets for Malayalam, an improved model could be integrated into desktop or mobile applications for speech-based typing and interacting with conversational agents.
+
+The subword modeling techniques proposed in this research for language modeling could also find application in \gls{e2e} \gls{asr} systems for acoustic modeling. However, further investigation is needed to explore this possibility.
+
+
+% \section{Summary}

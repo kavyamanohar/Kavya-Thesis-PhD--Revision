@@ -1,0 +1,44 @@
+% \vspace{-4.0\baselineskip}
+\textbf{\begin{center}
+		{\large \textbf{ABSTRACT}}
+\end{center}}
+% \vspace{-0.5\baselineskip}
+% \noindent\rule{\linewidth}{2pt}
+
+Speech is a simple and natural form of communication among humans. With the proliferation of devices and the widespread availability of the internet, it is essential to have machines that can interact with humans without any language barriers. However, devices and applications that can recognise, transcribe and respond to  Malayalam  speech is still far from a reality.
+
+Successful development of  natural language processing (NLP)  solutions including automatic speech recognition (ASR) for morphologically complex low resource languages like Malayalam, requires many fundamental computational linguistic tools and techniques, in addition to vast amount of speech and text corpora. There is currently a severe lack of openly licensed speech corpora in Malayalam, with less than hundred hours of available data to train an ASR system. This is significantly less than the amount of data available for high resource languages with established ASR systems. However the large amount  of web scraped Malayalam text corpora is easily available. This fact has motivated this research to stick on to the the classical speech recognition architecture of using separately trained acoustic and language models, rather that using modern End to End approaches that has orders of magnitude higher transcribed speech corpora requirement.
+
+This research work addresses different linguistic domain challenges associated with converting  Malayalam speech to textual form. Specifically, this research work explores the morphological complexity of Malayalam language using corpus linguistic parameters like type token ratio and moving average type token ratio, and concludes that Malayalam is more complex than other Indian and European languages analysed in the study. Based on this analysis, two potential directions for research in Malayalam \gls{asr} have been identified. The first involves developing a tool to create large vocabulary pronunciation lexicons, while the second involves implementing subword based ASR techniques. Both approaches have the potential to address the challenges posed by the complex morphology of Malayalam. 
+
+
+The classical architecture of ASR system rely on knowledge source like a pronunciation lexicon. A static pronunciation lexicon used to build an
+ASR decoder may not be sufficient to handle words the system may encounter in
+future. It will also be required to  update the pronunciation lexicon, with new words from time to time.  The morphological complexity of Malayalam leading to ever expanding word vocabulary pointed to the need for generating pronunciations of words automatically. The research in this direction, led to the development of a finite state transducer based software tool, Mlphon. Mlphon performs script grammar check, orthographic syllabification, phonetic feature analysis, grapheme to phoneme and phoneme to grapheme conversions. Mlphon is published as an open source python library under MIT License. Using Mlphon, the largest open licensed pronunciation lexicon for Malayalam which contains 100,000 common words of different word categories is published.
+
+Employing a large vocabulary pronunciation lexicon created using Mlphon, an ASR for Malayalam is developed. The acoustic modelling for this ASR is based on hybrid deep neural network and hidden Markov model (DNN-HMM) technique. The speech recognition system thus developed is evaluated on diverse test sets with low and medium out of vocabulary (OOV) words. The resulting ASR model is published under open license for enabling integration to various tasks.
+
+To address the issue of OOV words in Malayalam ASR, this research work proposes the development of an open vocabulary speech recognition system using subword lexicons. The current research presents two linguistically motivated subword segmentation strategies, which are compared with the data driven strategies. The subword based approach has significantly reduced the ASR model size and improved the word error rate by recognising many out of vocabulary words that a word based ASR would typically miss. Overall, the proposed open vocabulary speech recognition system that utilises subword lexicons presents a promising solution to the problem of OOV words in Malayalam ASR, resulting in improved model performance and recognition of a wider range of words.
+
+
+% strategies available in literature. on medium OOV test sets by recovering many out of vocabulary words, while using syllables as subword unit. A comparison of alternate subword segmentation strategies available in literature is also performed and evaluated in terms of word error rate.
+
+% The next work is the development of a large vocabulary speech recognition system for Malayalam using hybrid deep neural network and hidden Markov model (DNN/HMM) approach using Kaldi speech recognition toolkit employing pronunciation lexicon created by Mlphon and using openly available Malayalam speech corpora. The speech recognition system was evaluated on diverse test sets with low and medium out-of-vocabulary (OOV) words.
+
+% It also suggests the need for 
+
+
+
+% Malayalam is a language spoken by more than 38 million native speakers. 
+% The speech based applications that support Malayalam are far behind highly resourceful languages like English. The low resource nature of Malayalam in terms of annotated speech corpora and fundamental computational linguistic tools, makes the problem of automatic speech recognition in Malayalam a challenging task. Additionally Malayalam is a language with complex morphological structure, practically making its vocabulary infinite. 
+
+% To solve the challenges associated with morphological complexity, it is important to quantify it. 
+% In this research work, a quantitative analysis on the morphological complexity of Malayalam language, 
+% To address the requirement to automate the process of building large vocabulary pronunciation lexicon to be employed in the pipeline architecture of ASR, we developed a finite state transducer based software tool, Mlphon. It performs script grammar check, orthographic syllabification, phonetic feature analysis, grapheme to phoneme and phoneme to grapheme conversions. Mlphon is published as an open source python library under MIT License. Employing Mlphon, the publication of the largest open pronunciation lexicon for Malayalam which contains more than 100,000 words is done. %classified as verbs, nouns, proper nouns and loan words is done.
+
+% Pronunciations are available in phonemized and syllabified form. On analyzing the syllabification and grapheme to phoneme conversion accuracy of Mlphon on a hand curated gold standard reference of 1000 words, we obtain a syllabification accuray of 99\% and a syllable error rate of 0.62\%, and a phoneme recognition accuracy of 99\% and a phoneme error rate of 0.55\%. 
+
+% The next work is the development of a large vocabulary speech recognition system for Malayalam using hybrid deep neural network and hidden Markov model (DNN/HMM) approach using Kaldi speech recognition toolkit employing pronunciation lexicon created by Mlphon and using openly available Malayalam speech corpora. The speech recognition system was evaluated on diverse test sets with low and medium out-of-vocabulary (OOV) words.
+% % and it performed well with a word error rate of 10\% and 34\% on those test sets. 
+% The resulting ASR model is published under open licenses for enabling integration to various tasks.
+

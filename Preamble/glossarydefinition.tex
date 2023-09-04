@@ -1,0 +1,284 @@
+% \makeglossaries
+\makenoidxglossaries
+\newglossarystyle{mysuper}{%
+  \setglossarystyle{super}% base style on the list style
+  \renewenvironment{theglossary}%
+      {\tablehead{}\tabletail{}%
+       \begin{supertabular}{rp{1.4\glsdescwidth}}}%
+      {\end{supertabular}}%
+}
+\setglossarystyle{mysuper}
+
+
+\newacronym{aed}{AED}{attention based encoder decoder}
+\newacronym{ai}{AI}{artificial intelligence}
+\newacronym{am}{AM}{acoustic model}
+\newacronym{ann}{ANN}{artificial neural network}
+\newacronym{api}{API}{application program interface}
+\newacronym{asr}{ASR}{automatic speech recognition}
+
+\newacronym{bpe}{BPE}{byte pair encoding}
+
+\newacronym{cd}{CD}{context dependent}
+\newacronym{ci}{CI}{context independent}
+\newacronym{cigmmhmm}{CI GMM-HMM}{context independent GMM-HMM}
+\newacronym{cdgmmhmm}{CD GMM-HMM}{context dependent GMM-HMM}
+\newacronym{cmu}{CMU}{Carnegie Mellon university}
+\newacronym{cmvn}{CMVN}{cepstral mean and variance normalisation}
+\newacronym{cnn}{CNN}{convolutional neural network}
+\newacronym{ctc}{CTC}{connectionist temporal classification}
+
+\newacronym{dnn}{DNN}{deep neural network}
+
+\newacronym{e2e}{E2E}{End to End}
+\newacronym{em}{EM}{expectation maximisation}
+
+\newacronym{fst}{FST}{finite state transducer}
+\newacronym{fmllr}{fMLLR}{feature space maximum likelihood linear regression}
+
+\newacronym{g2p}{G2P}{grapheme to phoneme}
+\newacronym{gmm}{GMM}{Gaussian mixture model}
+
+\newacronym{hci}{HCI}{human computer interaction}
+\newacronym{hmm}{HMM}{hidden Markov model}
+\newacronym{htk}{HTK}{hidden Markov model toolkit}
+
+\newacronym{iitm}{IITM}{Indian Institute of Technology Madras}
+\newacronym{icfoss}{ICFOSS}{International Centre for Free and Open Source Software}
+\newacronym{imasc}{IMaSC}{ICFOSS Malayalam speech corpus}
+
+\newacronym{lda}{LDA}{linear discriminant analysis}
+\newacronym{lfbe}{LFBE}{log filter-bank energy}
+\newacronym{lfmmi}{LF-MMI}{lattice free maximum mutual information}
+\newacronym{lm}{LM}{language model}
+\newacronym{lpc}{LPC}{linear prediction coefficient}
+\newacronym{lts}{LTS}{letter to sound}
+\newacronym{lvcsr}{LVCSR}{large vocabulary continuous speech recognition}
+
+\newacronym{map}{MAP}{maximum a-posteriori estimation}
+\newacronym{mattr}{MATTR}{moving average type token ratio}
+\newacronym{mfcc}{MFCC}{mel frequency cepstral coefficient}
+\newacronym{mle}{MLE}{maximum likelihood estimation}
+\newacronym{mllt}{MLLT}{maximum likelihood linear transformation}
+\newacronym{mlp}{MLP}{multi layer perceptron}
+\newacronym{mmi}{MMI}{maximum mutual information}
+\newacronym{msc}{MSC}{Malayalam speech corpus}
+\newacronym{msl}{MSL}{mean segment length}
+
+
+\newacronym{nlp}{NLP}{natural language processing}
+
+\newacronym{oov}{OOV}{out of vocabulary}
+\newacronym{openslr}{Open SLR}{Open speech and language resources}
+
+\newacronym{pasm}{PASM}{pronunciation assisted subword modeling}
+\newacronym{p2g}{P2G}{phoneme to grapheme}
+\newacronym{per}{PER}{phoneme error rate}
+\newacronym{pl}{PL}{pronunciation lexicon}
+\newacronym{plp}{PLP}{perceptual linear prediction}
+
+\newacronym{rna}{RNA}{recurrent neural alignment}
+\newacronym{rnn}{RNN}{recurrent neural network}
+
+\newacronym{sat}{SAT}{speaker adaptive training}
+\newacronym{sbpe}{S-BPE}{Syllable-BPE}
+\newacronym{ser}{SER}{syllable error rate}
+\newacronym{sfst}{SFST}{Stuttgart finite state transducer}
+\newacronym{smc}{SMC}{Swathanthra Malayalam computing}
+\newacronym{sps}{SPS}{surprisal per sentence}
+\newacronym{svm}{SVM}{support vector machine}
+
+\newacronym{tdnn}{TDNN}{time delay neural network}
+\newacronym{ttgr}{TTGR}{type token growth rate}
+\newacronym{ttr}{TTR}{type token ratio}
+\newacronym{tts}{TTS}{text to speech}
+
+\newacronym{wer}{WER}{word error rate}
+\newacronym{wfst}{WFST}{weighted finite state transducer}
+\newacronym{wps}{WPS}{word processing speed}
+
+
+
+%Symbols
+\newglossaryentry{Probability}
+{   name=$Pr(.)$,
+    description={Probability function}
+}
+
+\newglossaryentry{X}
+{   name=$X$,
+    description={Speech feature vector sequence}
+}
+
+\newglossaryentry{Xk}
+{   name=$X_k$,
+    description={$k^{th}$ speech feature vector}
+}
+
+
+\newglossaryentry{P}
+{   name=$P$,
+    description={An independent phoneme}
+}
+
+
+\newglossaryentry{W}
+{   name=$W$,
+    description={Words in a sentence}
+}
+
+\newglossaryentry{Wcap}
+{   name=$\widehat{W}$,
+    description={Words in a sentence predicted by the ASR decoder}
+}
+
+\newglossaryentry{Q}
+{   name=$Q$,
+    description={Finite set of states in an  HMM}
+}
+
+\newglossaryentry{Qi}
+{   name=$Q_i$,
+    description={$i^{th}$ state in an HMM}
+}
+
+\newglossaryentry{transition}
+{   name=$a_{ij}$,
+    description={Transition probability in an \acrshort{hmm}}
+}
+
+\newglossaryentry{observationprobability}
+{   name=$b_i(X_k)$,
+    description={The probability of an HMM state $Q_i$ generating an observation $X_k$}
+}
+
+\newglossaryentry{Qcap}
+{   name=$\widehat{Q}$,
+    description={HMM state predicted by the acoustic model}
+}
+
+\newglossaryentry{wi}
+{   name=$w_i$,
+    description={$i^{th}$ word or subword in a sentence}
+}
+
+
+\newglossaryentry{PhonemeCD}
+{   name=$P_{CD}$,
+    description={A context dependent phoneme}
+}
+
+\newglossaryentry{typecount}
+{   name=$V$,
+    description={Type count in a corpus}
+}
+
+\newglossaryentry{tokencount}
+{   name=$N$,
+    description={Token count in a corpus or a sentence}
+}
+
+\newglossaryentry{windowlength}
+{   name=$L$,
+    description={The length of text window}
+}
+
+\newglossaryentry{q}
+{   name=$q$,
+    description={Finite set of states in an  FST}
+}
+
+\newglossaryentry{qi}
+{   name=\ipa{qi},
+    description={$i^{th}$ state in an FST}
+}
+\newglossaryentry{I}
+{   name=$I$,
+    description={Finite set of initial states in an FST}
+}
+\newglossaryentry{F}
+{   name=$F$,
+    description={Finite set of final states in an \acrshort{fst}}
+}
+
+
+\newglossaryentry{Sigma}
+{   name=$\Sigma$,
+    description={Finite set of output symbols of an FST}
+}
+
+\newglossaryentry{Gamma}
+{   name=$\Gamma$,
+    description={Finite set of input symbols of an FST}
+}
+
+\newglossaryentry{delta}
+{   name=$\delta$,
+    description={The state transition function in an FST}
+}
+
+\newglossaryentry{sigma}
+{   name=$\sigma$,
+    description={The output function in an FST}
+}
+
+
+\newglossaryentry{bow}
+{   name={\ipa <BoW>},
+    description={A tag to indicate beginning of word}
+}
+
+\newglossaryentry{eow}
+{   name={\ipa <EoW>},
+    description={A tag to indicate end of word}
+}
+
+\newglossaryentry{bos}
+{   name={\ipa <BoS>},
+    description={A tag to indicate beginning of syllable}
+}
+
+\newglossaryentry{eos}
+{   name={\ipa <EoS>},
+    description={A tag to indicate end of syllable}
+}
+
+
+
+\newglossaryentry{nll}
+{   name=$NLL$,
+    description={Negative Log Likelihood}
+}
+
+
+
+\newglossaryentry{ppl}
+{   name=$PPL$,
+    description={Perplexity}
+}
+
+\newglossaryentry{pplc}
+{
+    name=$PPL_c(W)$,
+    description={Perplexity of a sentence W, normalised to number of characters}
+}
+
+\newglossaryentry{pplw}
+{
+    name=$PPL_w(W)$,
+    description={Perplexity of a sentence W, normalised to number of words}
+}
+
+
+
+\newglossaryentry{oovwer}
+{   name=OOV-WER,
+    description={word error rate of out of vocabulary words}
+}
+
+
+
+
+
+
+

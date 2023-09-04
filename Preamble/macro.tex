@@ -1,0 +1,29 @@
+
+% define specific info
+\newcommand\thetitle{Linguistic challenges in Malayalam speech recognition: Analysis and solutions}
+\newcommand\thescholar{Kavya Manohar}
+\newcommand\theregnumber{D-TVE19JAN002}
+\newcommand\thesupervisor{Dr. A. R. Jayan}
+\newcommand\thecosupervisor{Dr. Rajeev Rajan}
+\newcommand\theyear{2023}
+\newcommand\thedepartment{Department of Electronics and Communication Engineering} 
+\newcommand\thecollege{College of Engineering Trivandrum} 
+
+\definecolor{Gray}{gray}{0.8}
+\DeclareMathOperator*{\argmax}{\arg\max}   % rbp
+\DeclareMathOperator*{\argmin}{\arg\min}   % rbp
+
+\makeatletter
+\AtBeginDocument{%
+  \let\l@algorithm\l@figure%
+  \let\listofalgorithms\listoffigures%
+  \let\@cftmakeloatitle\@cftmakeloftitle%
+  \patchcmd{\listofalgorithms}{\@cftmakeloftitle}{\@cftmakeloatitle}{}{}%
+  \patchcmd{\listofalgorithms}{\@starttoc{lof}}{\@starttoc{loa}}{}{}%
+  \patchcmd{\@cftmakeloatitle}{\listfigurename}{\listalgorithmname}{}{}%
+  \patchcmd{\@chapter}{\addtocontents}{%
+    \addtocontents{loa}{\protect\addvspace{10\p@}}%
+    \addtocontents}{}{}%
+}
+\makeatother
+
